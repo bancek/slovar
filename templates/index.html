@@ -18,15 +18,28 @@
         <div class="row-fluid">
           <div class="span12">
             <form class="form-search" action="/" style="margin: 0">
-              <input type="text" class="input-middle search-query" name="q" value="{{ query }}">
+              <input type="text" class="input-middle search-query" autocapitalize="off" name="q" value="{{ query }}">
               <button type="submit" class="btn">Iskanje</button>
             </form>
 
-            {{ results|safe }}
+            <div class="results">
+              {{ results|safe }}
+            </div>
           </div>
         </div>
       </div>
     </div>
 
+    <script src="/static/js/jquery-1.8.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("input").focus(function() {
+          this.setSelectionRange(0, 9999);
+          return false;
+        }).mouseup(function() {
+          return false;
+        });
+      });
+    </script>
   </body>
 </html>
