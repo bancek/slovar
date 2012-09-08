@@ -1,0 +1,23 @@
+#main {
+	padding: 20px 0;
+}
+
+.form-search {
+	padding-bottom: 10px;
+}
+
+.dictCat {
+	margin: 10px 0;
+}
+
+.dict_search_words p {
+	margin: 10px 0 0;
+}
+
+.dict_search_res {
+	margin: 0 0 0 40px;
+}
+
+.dict_search_res p {
+	margin: 0;
+}
